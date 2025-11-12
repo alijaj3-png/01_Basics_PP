@@ -50,9 +50,9 @@ function ausgabeNamen2(firstName) {  // Parameter
 // ausgabeNamen3(prompt("Vorname: "),prompt("Name: "));
 
 
-function ausgabeNamen3(firstName, familyName) {  // Parameter
-    console.log("Hallo, " + firstName + " " + familyName + "!");
-}
+// function ausgabeNamen3(firstName, familyName) {  // Parameter
+//     console.log("Hallo, " + firstName + " " + familyName + "!");
+// }
 
 
 /***** Funktionen 03a *****/
@@ -78,21 +78,21 @@ function ausgabeNamenSRP(firstName, familyName) {
 
 //1st responsibility: string composing
 output(getString("Max","Mütze"));
-output(getString("Maxine","Mützerich"));
-const prompt = require('prompt-sync')({sigint: true});
-output(getString(prompt("Vorname?: "),prompt("Name?: ")));
+// output(getString("Maxine","Mützerich"));
+// const prompt = require('prompt-sync')({sigint: true});
+// output(getString(prompt("Vorname?: "),prompt("Name?: ")));
 
 function getString(firstName, familyName) {
     const GAP = " ";
     let outputStr = "Hallo, " + firstName + GAP + familyName + "!";
     return outputStr;  // Fkt.- OUTPUT sendet Daten zum call
+    console.log("hi");  // Abbruch
 }
 
 //2nd responsibility: string output
 // output("hi");
 // output(2);
 // output(true);
-
 function output(outputData) { // Wrapper
     console.log(outputData);
 }
