@@ -19,7 +19,7 @@ const prompt = require('prompt-sync')({sigint: true});
 
 console.log("------");
 console.log("Herzlich Willkommen bei MD, Ihre Bestellung bitte!");
-console.log("Hamburger(1), Hamburger(2), oder Chilliburger(3)?");
+console.log("Hamburger(1), Cheeseburger(2), oder Chilliburger(3)?");
 choice = parseInt(prompt("Ihre Auswahl?: "));
 
 switch (choice) {
@@ -41,10 +41,12 @@ console.log("------");
 console.log("Möchten Sie ein Getränk dazu bestellen?");
 choice = prompt("y/n?: ");
 
-if (choice == "y") {
+if ((choice == "y") || (choice == "Y")) {
+
     console.log("------");
     console.log("Cola(1), Fanta(2) oder Sprite(3)?");
     choice = parseInt(prompt("Ihre Auswahl?: "));
+
     switch (choice) {
         case 1:
             drink = "Cola";
