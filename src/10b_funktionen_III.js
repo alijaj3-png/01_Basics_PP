@@ -63,7 +63,7 @@ function getNumber(figure) {
 
     let displayStr = INFO_STR_PRE_NUM + figure + INFO_STR_POST_NUM;
     let inputStr = prompt(displayStr);
-    // output(inputStr);
+    output(inputStr);
 
     /** 
      * Wenn User abbricht, macht eine weitere Bearbeitung
@@ -77,9 +77,9 @@ function getNumber(figure) {
    
     let num = parseInt(inputStr);
 
-    // wenn Eingabe keine Zahl --> nochmal
+    // wenn Eingabe keine Zahl...
     if (isNaN(num)){
-       getNumber(figure) 
+       return getNumber(figure); // Funktion wird erneut aufgerufen
     }
     
     return num;
