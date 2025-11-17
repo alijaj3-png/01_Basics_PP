@@ -34,12 +34,13 @@ let person = {
                 firstName:"Felix",
                 familyName: "Wolf",
                 salary:[120000, 160000],
-                permission: true
-
-
-
-
-
+                permission: true,
+                sayHello: function(){
+                    return "Hallo";
+                },
+                sayHello2: function(){
+                    return "Hallo, ich bin " + this.firstName
+                }
             };
 
 output(person);
@@ -58,9 +59,16 @@ for (let i = 0; i < person.salary.length; i++) {
 output("---------------")
 output(person.permission);
 
+output("---------------")
+const txt = person.sayHello() + ", ich bin " + person.firstName +
+            " und verdiene " + person.salary[1] + " p.a.";
+
+output(txt);
+output("---------------")
 
 
-
+const txt2 = person.sayHello2() + " und verdiene " + person.salary[1] + " p.a.";
+output(txt2);
 
 
 
